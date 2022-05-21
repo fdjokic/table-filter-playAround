@@ -18,8 +18,8 @@ function App() {
   };
 
   const search = (rows) => {
-    const columns =
-      rows[0] && Object.keys(rows[0]).filter((item) => item !== Array.isArray);
+    // const columns =
+    //   rows[0] && Object.keys(rows[0]).filter((item) => item !== Array.isArray);
 
     return rows.filter((row) =>
       searchColumns.some(
@@ -34,8 +34,7 @@ function App() {
   }, []);
   console.dir(data);
 
-  const columns =
-    data[0] && Object.keys(data[0]).filter((item) => item !== Array.isArray);
+  const columns = data[0] && Object.keys(data[0]);
 
   return (
     <div>

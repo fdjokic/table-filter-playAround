@@ -14,9 +14,13 @@ const Datatable = ({ data = [] }) => {
       </thead>
       <tbody>
         {data.map((row, index) => {
+          console.log(row);
           return (
             <tr key={index}>
               {columns.map((column, index) => {
+                if (row[column].toString().includes('http')) {
+                  return <td></td>;
+                }
                 return <td key={index}>{row[column]}</td>;
               })}
             </tr>
